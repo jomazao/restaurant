@@ -2,7 +2,7 @@ package models;
 
 public class Table {
 	
-	private String number ;
+	private String number;
 	private int capacity;
 	private String location;
 	

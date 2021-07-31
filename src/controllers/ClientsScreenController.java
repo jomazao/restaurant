@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.ArrayList;
+
 import data.ClientRepository;
 import models.Client;
 
@@ -8,8 +10,8 @@ public class ClientsScreenController {
 	ClientRepository clientRepository = new ClientRepository();
 	
 	public String createClient(String name, String lastName, String nId, String phoneNumber, boolean hasChildren) {
-		
-		
+			
+	
 		if (name.trim().length() < 3) {
 			return "El nombre no puede tener menos de 3 dígitos";
 		}
@@ -27,6 +29,10 @@ public class ClientsScreenController {
 			return "Hubo un error al crear el cliente";
 		}
 		
+	}
+
+	public ArrayList<Client> getClients() {
+		return clientRepository.getAll();
 	}
 
 }

@@ -64,4 +64,11 @@ public class Client {
 		return hasChildren;
 	}
 
+	@Override
+	public String toString() {
+		return "Client [name=" + name + ", lastName=" + lastName + ", nId=" + nId + ", phoneNumber=" + phoneNumber
+				+ ", hasChildren=" + hasChildren + "]";
+	}
+	
+
 }

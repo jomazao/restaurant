@@ -1,8 +1,10 @@
 package ui;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import controllers.ClientsScreenController;
+import models.Client;
 
 public class ClientsScreen {
 	
@@ -27,9 +29,9 @@ public class ClientsScreen {
 		nId = sc.nextLine();
 		System.out.println("Digite el teléfono: ");
 		phoneNumber = sc.nextLine();
-		
 		System.out.println("El cliente tiene hijos s/n : ");
 		String hasChildString = sc.nextLine();
+				
 		if (hasChildString.toLowerCase().equals("s")) {
 			hasChildren = true;
 		} else {
@@ -42,6 +44,16 @@ public class ClientsScreen {
 	}
 	
 	public void listClients() {
+		ArrayList<Client> clients = clientsScreenController.getClients();
+		if (clients.size() == 0) {
+			System.out.println("No hay ningún cliente registrado");
+			return;
+		}
+		
+		for (int i = 0 ; i < clients.size();i++) {
+			Client client = clients.get(i);
+			System.out.println(client.toString());
+		}
 		
 	}
 	

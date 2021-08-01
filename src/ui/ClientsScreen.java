@@ -60,6 +60,20 @@ public class ClientsScreen {
 	public void deleteClient() {
 		
 	}
+
+	public void searchClient() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Digite un documento a buscar:");
+		String id = scanner.nextLine();
+		Client client = clientsScreenController.searchClient(id);
+		if (client != null) {
+			System.out.println(client.toString());
+		} else {
+			System.out.println("No se encontró el cliente");
+		}
+		
+		
+	}
 	
 
 }

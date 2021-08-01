@@ -20,5 +20,16 @@ public class ClientRepository {
 		return clients;
 		
 	}
+
+
+	public Client findClientById(String id) {
+		for (int i = 0 ; i < clients.size(); i++) {
+			Client client = clients.get(i);
+			if (client.getnId().equals(id)) {
+				return client;
+			}
+		}
+		return null;
+	}
 	
 }

@@ -35,4 +35,9 @@ public class ClientsScreenController {
 		return clientRepository.getAll();
 	}
 
+	public Client searchClient(String id) {
+		Client client = clientRepository.findClientById(id);
+		return client;
+	}
+
 }

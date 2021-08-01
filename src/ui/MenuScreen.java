@@ -12,6 +12,7 @@ public class MenuScreen {
 		System.out.println("///////////////////////////////////////");
 		System.out.println("1. Crear cliente");
 		System.out.println("2. Listar clientes");
+		System.out.println("3. Buscar cliente por id");
 		try {
 			int optionSelected = Integer.parseInt(scanner.nextLine());
 			return optionSelected;

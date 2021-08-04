@@ -22,6 +22,12 @@ public class Main {
 				case 3: 
 					clientsScreen.searchClient();
 					break;
+				case 4: 
+					clientsScreen.updateclient();
+					break;
+				case 5: 
+					clientsScreen.deleteClient();
+					break;
 				default:
 					System.out.println("Esta opción no está disponible");
 			}	

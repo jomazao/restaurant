@@ -31,5 +31,24 @@ public class ClientRepository {
 		}
 		return null;
 	}
+
+
+	public boolean updateClient(Client client, Client clientUpdate) {
+		int position = clients.indexOf(client);
+		clients.set(position,clientUpdate);
+		return true;
+	}
+
+
+	public Boolean deleteClientById(String id) {
+		for (int i = 0 ; i < clients.size(); i++) {
+			Client client = clients.get(i);
+			if (client.getnId().equals(id)) {
+				clients.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
 	
 }

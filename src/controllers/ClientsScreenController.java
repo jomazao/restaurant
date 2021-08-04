@@ -40,4 +40,15 @@ public class ClientsScreenController {
 		return client;
 	}
 
+	public String updateClient(Client client, String name, String lastName, String nId, String phoneNumber,
+			boolean hasChildren) {
+		Client clientUpdate = new Client(name, lastName, nId, phoneNumber, hasChildren);
+		clientRepository.updateClient(client,clientUpdate);
+		return null;
+	}
+
+	public Boolean deleteClient(String id) {
+		return clientRepository.deleteClientById(id);
+	}
+
 }

@@ -1,18 +1,20 @@
 package ui;
 
-import java.io.IOException;
-
 public class Main {
 
 	public static void main(String[] args) {
-		ClientsScreen clientsScreen = new ClientsScreen();
 		MenuScreen menuScreen = new MenuScreen();
-		clientsScreen.listClients();
+		
+		ClientsScreen clientsScreen = new ClientsScreen();
+		RecipesScreen recipesScreen = new RecipesScreen();
+		
+
 		while (true) {
 			
-			int selected = menuScreen.showMenuOptions();
+			int selected = menuScreen.showMenuOptions();			
 			switch (selected) {
-			case 0:
+				case 0:
+					
 				case 1:
 					clientsScreen.createClient();
 					break;			
@@ -27,6 +29,9 @@ public class Main {
 					break;
 				case 5: 
 					clientsScreen.deleteClient();
+					break;
+				case 6:
+					recipesScreen.createRecipe();
 					break;
 				default:
 					System.out.println("Esta opción no está disponible");

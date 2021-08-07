@@ -14,7 +14,8 @@ public class ClientsScreenController {
 	
 		if (name.trim().length() < 3) {
 			return "El nombre no puede tener menos de 3 dígitos";
-		}
+		} 	
+		
 		if (lastName.trim().length() < 3) {
 			return "El apellido no puede tener menos de 3 dígitos";
 		}

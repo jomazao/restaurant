@@ -8,6 +8,7 @@ public class MenuScreen {
 	public int showMenuOptions() {
 		
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("");
 		System.out.println("Seleccione la opción que desea realizar:");
 		System.out.println("///////////////////////////////////////");
 		System.out.println("1. Crear cliente");
@@ -15,6 +16,7 @@ public class MenuScreen {
 		System.out.println("3. Buscar cliente por id");
 		System.out.println("4. Actualizar cliente por id");
 		System.out.println("5. Eliminar cliente por id");
+		System.out.println("6. Crear receta");
 
 
 		try {
